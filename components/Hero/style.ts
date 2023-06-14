@@ -15,12 +15,6 @@ export const HeroStyled = styled.div<HeroStyledType>`
     width: 1440px;
 
     
-    .hero__title{
-        font-size: 60px;
-    }
-    .hero__subtitle{
-        font-size: 30px;
-    }
     .hero{
         &__side{
             max-height: 600px;
@@ -43,8 +37,8 @@ export const HeroStyled = styled.div<HeroStyledType>`
                     transform: scale(1.5);
                     z-index: 0;
                     position: absolute;
-                    top: -50px;
-                    left: 200px;
+                    top: -20px;
+                    left: 220px;
                     right: 0;
                     bottom: 0;
                     display: flex;
@@ -69,34 +63,67 @@ export const HeroStyled = styled.div<HeroStyledType>`
         }
     }
 
-    @media (max-width: 1366px) {
+    @media (max-width: 1440px) {
+        margin-top: 0px !important;
         width: 100vw;
         flex-wrap: wrap;
-        flex-direction: column;
+        padding: 10px;
         .hero{
-        &__side{
-            margin: 0 auto;
-            width: auto;
-            max-height: inherit;
-            min-height: 250px;
-            max-width:  1000px;
-            min-width: inherit;
-            width: 100%;
-            &--right{
+            &__side{
+                margin: 0 auto;
+                width: auto;
+                max-height: 250px;
+                min-height: 220px;
+                max-width: 800px;
+                min-width: inherit;
+                width: 100%;
+                &--right{
+                    max-height: 250px;
+                    .hero__image-overlay{
+                        transform: scale(0.8) !important;
+                    }
+                }
+            }
 
-                .hero__image-overlay{
-                    transform: scale(0.9);
+            &__image{
+                img{
+                    width: 80%;
+                    max-width: 1000px;
                 }
             }
         }
+    }
 
-        &__image{
-            img{
+    @media (max-width: 600px) {
+        margin-top: 0px !important;
+        width: 100vw;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px;
+        .hero{
+            &__side{
+                margin: 0 auto;
+                width: auto;
+                max-height: 250px;
+                min-height: 200px;
+                max-width:  1000px;
+                min-width: inherit;
                 width: 100%;
-                max-width: 1000px;
+                &--right{
+                    max-height: 250px;
+                    .hero__image-overlay{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            &__image{
+                img{
+                    width: 80%;
+                    max-width: 1000px;
+                }
             }
         }
-    }
     }
 
 `

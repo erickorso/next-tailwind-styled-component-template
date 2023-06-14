@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 // SEO
 import { DefaultSeo } from "next-seo";

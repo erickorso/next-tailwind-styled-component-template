@@ -5,20 +5,21 @@ import { XButtonType } from './types'
 import { ButtonStyled } from './style'
 
 const XButton: FC<XButtonType> = ({
-    title,
-    containerStyles,
-    handleClick}
-) => {
+  title,
+  containerStyles,
+  onClick,
+  size
+}) => {
   return (
     <ButtonStyled
-        disabled={false}
-        type={'button'}
-        className={`custom-btn ${containerStyles}`}
-        onClick={() => {}}
+      disabled={false}
+      type={'button'}
+      className={`custom-btn ${containerStyles} ${size ? size : ''}`}
+      onClick={() => onClick}
     >
-        <span className={`flex-1 ${handleClick}`}>
-            {title}
-        </span>
+      <span className={`flex-1`}>
+        {title}
+      </span>
     </ButtonStyled>
   )
 }

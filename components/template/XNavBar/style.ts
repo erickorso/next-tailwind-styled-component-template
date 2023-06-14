@@ -7,4 +7,8 @@ export const XNavBarStyled = styled.header`
     right: 0;
     left: 0;
     z-index: 100;
+
+    @media (max-width: 1440px) {
+        padding: 10px;
+    }
 `
