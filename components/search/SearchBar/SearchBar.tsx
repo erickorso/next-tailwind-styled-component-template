@@ -5,7 +5,6 @@ import {useState} from 'react'
 
 const SearchBar = () => {
   const [manuf, setManufac] = useState('')
-
   const handleSubmit = () => {}
 
   return (
